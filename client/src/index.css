@@ -199,5 +199,5 @@ button:not(:disabled), a[href] { cursor: pointer; }
 
 @media (min-width: 1600px) { .hero-section { min-height: 880px; } .hero-layout { grid-template-columns: .86fr 1.14fr; } }
 
-/* Asset de marca integrado ao hero — gradientes mantêm o texto sempre legível. */
-.hero-section { background-image: linear-gradient(90deg, rgba(23,25,24,.98) 0%, rgba(23,25,24,.88) 38%, rgba(23,25,24,.38) 78%, rgba(23,25,24,.58) 100%), url('/manus-storage/fireguard-hero-glow_580a5453.png'); background-position: center; background-size: cover; }
+/* Asset local versionado — gradientes mantêm o texto sempre legível. */
+.hero-section { background-image: linear-gradient(90deg, rgba(23,25,24,.98) 0%, rgba(23,25,24,.88) 38%, rgba(23,25,24,.38) 78%, rgba(23,25,24,.58) 100%), url('/assets/fireguard-hero-glow.png'); background-position: center; background-size: cover; }
