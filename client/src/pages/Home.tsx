@@ -70,12 +70,14 @@ const features: Array<{ title: string; text: string; icon: IconType }> = [
 const plans = [
   {
     name: "Gratuito",
+    price: "R$ 0",
     eyebrow: "Para começar",
     description: "O essencial para colocar sua rotina de segurança em ordem.",
     features: ["1 local cadastrado", "Inventário de equipamentos", "Checklists básicos"],
   },
   {
     name: "Pro",
+    price: "R$ 100",
     eyebrow: "Para evoluir",
     description: "Mais automação e visibilidade para times que querem antecipar riscos.",
     features: ["Locais e equipes ampliados", "Alertas inteligentes", "Relatórios e documentos"],
@@ -83,6 +85,7 @@ const plans = [
   },
   {
     name: "Business",
+    price: "R$ 300",
     eyebrow: "Para escalar",
     description: "Governança e controle para operações com múltiplos locais.",
     features: ["Gestão multiunidade", "Permissões por equipe", "Suporte prioritário"],
@@ -199,7 +202,7 @@ function Home() {
 
         <section className="dashboard-section section-cream" id="dashboard"><div className="container"><div className="section-intro section-intro--split reveal-up"><div><span className="section-number">04 / Visibilidade</span><h2>Saúde da operação<br /><em>em um só olhar.</em></h2></div><div className="dashboard-intro-side"><p>Informação certa, no momento certo. Uma visão que ajuda sua equipe a priorizar o que realmente importa.</p><div className="dashboard-meta"><span className="live-dot live-dot--dark" /> Dados de demonstração <span>•</span> Interface em evolução</div></div></div><div className="dashboard-showcase reveal-up"><DashboardMockup compact /></div></div></section>
 
-        <section className="plans-section section-dark" id="planos"><div className="container"><div className="section-intro section-intro--split section-intro--light reveal-up"><div><span className="section-number section-number--light">05 / Planos</span><h2>Escolha o ritmo<br /><em>da sua operação.</em></h2></div><div className="plans-intro-side"><p>Comece com o essencial e evolua conforme sua operação cresce. Os planos e valores serão configuráveis para a realidade do seu negócio.</p><span className="config-label"><span /> Valores em breve</span></div></div><div className="plans-grid">{plans.map((plan, index) => <article className={`plan-card reveal-up ${plan.featured ? "plan-card--featured" : ""}`} style={{ animationDelay: `${index * 90}ms` }} key={plan.name}>{plan.featured && <div className="plan-ribbon">Mais escolhido</div>}<div className="plan-card__top"><span className="plan-eyebrow">{plan.eyebrow}</span><h3>{plan.name}</h3><p>{plan.description}</p></div><div className="plan-price"><strong>Em breve</strong><span>preço configurável</span></div><ul>{plan.features.map((feature) => <li key={feature}><Check size={14} />{feature}</li>)}</ul><button className={`button ${plan.featured ? "button--primary" : "button--outline-light"}`} onClick={() => handleComingSoon(`Plano ${plan.name}`)}>Conhecer plano <ArrowRight size={14} /></button></article>)}</div></div></section>
+        <section className="plans-section section-dark" id="planos"><div className="container"><div className="section-intro section-intro--split section-intro--light reveal-up"><div><span className="section-number section-number--light">05 / Planos</span><h2>Escolha o ritmo<br /><em>da sua operação.</em></h2></div><div className="plans-intro-side"><p>Comece com o essencial e evolua conforme sua operação cresce. Os planos e valores serão configuráveis para a realidade do seu negócio.</p><span className="config-label"><span /> Valores configuráveis</span></div></div><div className="plans-grid">{plans.map((plan, index) => <article className={`plan-card reveal-up ${plan.featured ? "plan-card--featured" : ""}`} style={{ animationDelay: `${index * 90}ms` }} key={plan.name}>{plan.featured && <div className="plan-ribbon">Mais escolhido</div>}<div className="plan-card__top"><span className="plan-eyebrow">{plan.eyebrow}</span><h3>{plan.name}</h3><p>{plan.description}</p></div><div className="plan-price"><strong>{plan.price}</strong><span>preço configurável</span></div><ul>{plan.features.map((feature) => <li key={feature}><Check size={14} />{feature}</li>)}</ul><button className={`button ${plan.featured ? "button--primary" : "button--outline-light"}`} onClick={() => handleComingSoon(`Plano ${plan.name}`)}>Conhecer plano <ArrowRight size={14} /></button></article>)}</div></div></section>
 
         <section className="about-section section-light" id="sobre"><div className="container about-layout"><div className="about-mark reveal-up"><div className="about-mark__halo" /><Flame size={74} strokeWidth={1.15} /></div><div className="about-copy reveal-up"><span className="section-number">06 / Sobre nós</span><h2>Prevenção não é um evento.<br /><em>É uma cultura.</em></h2><p>O FireGuard nasce para ajudar empresas a cuidarem melhor do que sustenta suas operações: pessoas, espaços e continuidade. Tecnologia é o meio. Clareza para agir é o objetivo.</p><div className="about-signature"><span className="signature-line" /><span>Construído com intenção, para operações reais.</span></div></div><div className="about-stat reveal-up"><span>Nosso princípio</span><strong>Antecipar<br /><em>para proteger.</em></strong><div className="about-stat__mark"><ShieldCheck size={20} /><span>FG / 01</span></div></div></div></section>
 
